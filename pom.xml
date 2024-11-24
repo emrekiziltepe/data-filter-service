@@ -108,7 +108,8 @@
                                 <exclude>org/example/datafilter/data/**/</exclude>
                                 <exclude>org/example/datafilter/exception/**/</exclude>
                                 <exclude>org/example/datafilter/util/**/</exclude>
-                                <exclude>org/example/datafilter/**/DocumentApplication.class</exclude>
+                                <exclude>org/example/datafilter/config/**/</exclude>
+                                <exclude>org/example/datafilter/**/DataFilterApplication.class</exclude>
                             </excludes>
                         </configuration>
                     </execution>

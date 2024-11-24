@@ -17,13 +17,16 @@ import java.net.Socket;
 @RequiredArgsConstructor
 public class SocketConsumerService {
 
-    @Value("${kafka.topic}")
+    @Value("${spring.kafka.template.default-topic}")
     private String topic;
+
+    @Value("${socket.port}")
+    private int port;
 
     private final KafkaTemplate<String, String> kafkaTemplate;
 
     public void startConsumer() {
-        try (Socket socket = new Socket("localhost", 9090);
+        try (Socket socket = new Socket("localhost", port);
              var reader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
              var fileWriter = new FileWriter("output.txt", true)) {
 
