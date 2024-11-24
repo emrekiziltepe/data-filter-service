@@ -1,0 +1,16 @@
+version: '1'
+
+services:
+  data-filter-app:
+    image: openjdk:21-jdk
+    ports:
+      - "8080:8080"
+    volumes:
+      - ../target/data-filter-app.jar:/data-filter-app.jar
+    command: [ "java", "-jar", "/data-filter-app.jar" ]
+    networks:
+      - app-net
+
+networks:
+  app-net:
+    driver: bridge
