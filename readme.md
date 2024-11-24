@@ -2,7 +2,7 @@
 
 You need to up compose file located in "/docker/docker-compose.yml" direction with "docker-compose up" command.
 
-Swagger-UI has been added to the project. You can access it from the URL http://localhost:8080/swagger-ui/index.html.
+Swagger-UI has been added to the project. You can access it from the URL http://localhost:8081/swagger-ui/index.html.
 Additionally, a JaCoCo code coverage report is available at target/site/jacoco/index.html.
 Sample request objects for Swagger-UI and curl commands can be found below.
 
@@ -17,7 +17,7 @@ request body:
 
 
 curl -X 'POST' \
-'http://localhost:8080/v1/data/process' \
+'http://localhost:8081/v1/data/process' \
 -H 'accept: */*' \
 -H 'Content-Type: application/json' \
 -d '[
