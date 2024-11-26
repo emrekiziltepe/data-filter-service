@@ -43,9 +43,10 @@ public class SocketConsumerService {
         var parts = line.split(",");
         var value = Integer.parseInt(parts[1]);
         if (value > 90) {
-            System.out.println(line);
+            System.out.println("Data send to kafka" + value);
             kafkaTemplate.send(topic, line);
         } else {
+            System.out.println("Data written to output.txt" + value);
             fileWriter.append(line).append(System.lineSeparator());
             fileWriter.flush();
         }
